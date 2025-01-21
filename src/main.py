@@ -11,22 +11,22 @@ from label import Label
 
 # pygame setup
 pygame.init()
-SIZE = 1.0
+SIZE = 0.55
 pygame.display.set_caption('Classe Morta')
-screen = pygame.display.set_mode((1080 * SIZE, 2340 * SIZE), pygame.RESIZABLE)
+screen = pygame.display.set_mode((1080 * SIZE, 1540 * SIZE), pygame.RESIZABLE)
 clock = pygame.time.Clock()
 running = True
 
 PRECISION = 1
 MESSAGE_COUNT_DOWN = 2 * 60
 MATERIE = ["STORIA", "INFORMATICA", "LINGUA E CULTURA STRANIERA","LINGUA E LETTERATURA ITALIANA", "FILOSOFIA", "FISICA", "DISEGNO", "SCIENZE MOTORIE","SCIENZE NATURALI", "MATEMATICA", "EDUCAZIONE CIVICA"]
-CREDENTIALS = util.resource_path("assets/credentials.txt")
+CREDENTIALS = "credentials.txt"
 title = Label("CLASSEMORTA", int(128*SIZE))
 
 # login page elements
 input_box_mail = InputBox(50*SIZE, 170*SIZE, 300*SIZE, int(90*SIZE))
 input_box_password = InputBox(50*SIZE, 270*SIZE, 300*SIZE, int(90*SIZE), private=True)
-login_button = Button(500, 500*SIZE, 200*SIZE, 80*SIZE, text="LOGIN",)
+login_button = Button(500*SIZE, 500*SIZE, 200*SIZE, 80*SIZE, text="LOGIN",)
 warning = Label("Login Failed", int(64*SIZE), "red")
 message_counter = 0
 

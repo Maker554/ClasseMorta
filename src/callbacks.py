@@ -20,7 +20,7 @@ class LoginCall(CallBack):
 class LogoutCall(CallBack):
 
     def run(self):
-        file = open(util.resource_path("assets/credentials.txt"), "w", encoding="utf-8")
+        file = open("credentials.txt", "w", encoding="utf-8")
         file.write("")
         file.close()
         return True
